@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GOS Sapphire Cartoon Video Quiz</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #2e8b57;
+        }
+        .quiz-container {
+            background-color: #fff8dc;
+            border: 3px dashed #ffa07a;
+            border-radius: 15px;
+            padding: 20px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .option {
+            display: block;
+            margin: 10px;
+            padding: 10px;
+            background-color: #ffefd5;
+            border: 2px solid #deb887;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .option:hover {
+            background-color: #ffe4b5;
+        }
+        .feedback {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>GOS Sapphire Installation: Cartoon Video Quiz</h1>
+
+    <!-- Embedded video placeholder -->
+    <video width="640" height="360" controls>
+        <source src="gos_sapphire_intro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="quiz-container">
+        <h2>Quiz Time!</h2>
+        <p>What is the main purpose of the GOS Sapphire system mentioned in this video?</p>
+        <div class="option" onclick="checkAnswer('a')">a) To make tables super shiny.</div>
+        <div class="option" onclick="checkAnswer('b')">b) To add special functions to gambling tables.</div>
+        <div class="option" onclick="checkAnswer('c')">c) To help dealers count cards.</div>
+        <div class="feedback" id="feedback"></div>
+    </div>
+
+    <script>
+        function checkAnswer(answer) {
+            const feedback = document.getElementById('feedback');
+            if (answer === 'b') {
+                feedback.textContent = "🎉 Correct! GOS Sapphire adds special functions to gambling tables.";
+                feedback.style.color = "green";
+            } else {
+                feedback.textContent = "❌ Oops! That's not correct. Try again!";
+                feedback.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>
